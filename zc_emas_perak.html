@@ -21,7 +21,17 @@
                 <div class="mdl-layout__header-row site-navigation-row mdl-layout--large-screen-only">
                 <nav class="mdl-navigation indigo mdl-typography--body-1-force-preferred-font">
                     <a class="mdl-navigation__link" href="index.html">Beranda</a>
-                    <a class="mdl-navigation__link" href="portfolio.html">Macam-macam Zakat</a>
+                    <a class="dropdown-trigger" href="#!" data-target="dropdown1">Macam-macam Zakat</a><i class="material-icons right">arrow_drop_down</i>
+                    <!-- Dropdown Structure -->
+                    <ul id="dropdown1" class="dropdown-content">
+                        <li><a class="" href="zc_emas_perak.html">Zakat Emas dan Perak</a></li>
+                        <li><a class="" href="about.html">Zakat Uang</a></li>
+                        <li><a class="" href="about.html">Zakat Perdagangan</a></li>
+                        <li><a class="" href="about.html">Zakat Pertanian</a></li>
+                        <li><a class="" href="about.html">Zakat Hewan Ternak</a></li>
+                        <li><a class="" href="about.html">Zakat Harta Temuan</a></li>
+                        <li><a class="" href="contact.html">Tentang</a></li>
+                    </ul>
                     <a class="mdl-navigation__link" href="about.html">Tentang</a>
                 </nav>
                 </div>
@@ -30,7 +40,7 @@
             <div class="mdl-layout__drawer mdl-layout--small-screen-only">
                 <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
                     <a class="mdl-navigation__link" href="index.html">Beranda</a>
-                    <a class="mdl-navigation__link" href="portfolio.html">Zakat Emas dan Perak</a>
+                    <a class="mdl-navigation__link" href="zc_emas_perak.html">Zakat Emas dan Perak</a>
                     <a class="mdl-navigation__link" href="about.html">Zakat Uang</a>
                     <a class="mdl-navigation__link" href="about.html">Zakat Perdagangan</a>
                     <a class="mdl-navigation__link" href="about.html">Zakat Pertanian</a>
@@ -39,15 +49,11 @@
                     <a class="mdl-navigation__link" href="contact.html">Tentang</a>
                 </nav>
             </div>
-        
+
             <main class="mdl-layout__content">
-                <div class="site-content">
+                <div class="site-content">            
                     <div class="mdl-grid site-max-width">
-                        <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp page-content">
-                        <div class="mdl-card__title">
-                            <h1 class="mdl-card__title-text">Menu Zakat disini</h1>
-                        </div>
-                        
+                        <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp page-content">    
                         <div class="mdl-grid site-copy">
                             <div class="mdl-cell mdl-cell--12-col">
                                 <h3 class="header">Zakat Emas dan Perak</h3>
@@ -159,6 +165,7 @@
 
                 $(document).ready(function() {
                     updateInputText();
+                    $(".dropdown-trigger").dropdown();
                 });
             </script>
         </div>
