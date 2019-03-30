@@ -1,98 +1,83 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
-<head>
-<meta name="Description" content="ZakatCalc - Kalkulator Zakat" />
-<meta name="Keywords" content="ZakatCalc, zakat, mal, harta, penghasilan, profesi, kalkulator" />
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<meta name="Distribution" content="Global" />
-<meta name="Robots" content="index,follow" />
-<title>ZakatCalc - Kalkulator Zakat</title>
-<link rel="stylesheet" href="css/style.css" type="text/css" />
-<script language="javascript" type="text/javascript" src="js/jquery.min.js"></script>
-<script language="javascript" type="text/javascript" src="js/elsyifa.js"></script>
-<script language="javascript" type="text/javascript" src="js/main.js"></script>
-</head>
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Kalkulator Zakat</title>
+        <meta name="description" content="Demo of Material design portfolio template by TemplateFlip.com."/>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;amp;lang=en" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css" rel="stylesheet">
+        <link href="materialize/styles/main.css" rel="stylesheet">
+    </head>
+    <body id="top">
+        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+            
+            <header class="mdl-layout__header mdl-layout__header--waterfall site-header">
+                <div class="mdl-layout__header-row site-logo-row"><span class="mdl-layout__title">
+                    <div class="site-logo"></div><span class="site-description">Kalkulator Zakat</span></span></div>
+                <div class="mdl-layout__header-row site-navigation-row mdl-layout--large-screen-only">
+                <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
+                    <a class="mdl-navigation__link" href="index.html">Beranda</a>
+                    <a class="mdl-navigation__link" href="portfolio.html">Macam-macam Zakat</a>
+                    <a class="mdl-navigation__link" href="about.html">Tentang</a>
+                </nav>
+                </div>
+            </header>
 
-<body>
-
-<div id='container'>
-<div id='containerbox'>
-<div id='header'>
-<div id='mainheader'></div>
-<div id='searchbar'></div>
-<div class='cleared'></div>
-</div>
-<div id='topnav'>
-	<a href='./index.html'>Home</a> |
-	<a href='https://github.com/alfarisi/zakatcalc/releases'>Download</a>
-</div>
-<table id="mainwrapper"><tr>
-<th id="sidebar">
-
-<!-- menu -->
-<ul>
-
-<li>
-	<h3>Kalkulator Zakat</h3>
-	<ul class="sidenav">
-		<li><a href="zc_emas_perak.html">Zakat Emas & Perak</a></li>
-		<li><a href="zc_uang.html">Zakat Uang</a></li>
-		<li><a href="zc_perdagangan.html">Zakat Perdagangan</a></li>
-		<li><a href="zc_pertanian.html">Zakat Pertanian</a></li>
-		<li><a href="zc_ternak.html">Zakat Hewan Ternak</a></li>
-		<li><a href="zc_temuan.html">Zakat Harta Temuan</a></li>
-	</ul>
-</li>
-
-<li>
-	<h3>Help</h3>
-	<ul class="sidenav">
-		<li><a href="about.html">About</a></li>
-		<li><a href="license.html">License</a></li>
-	</ul>
-</li>
-
-<li>
-	<h3>Link</h3>
-	<ul class="sidenav">
-		<li><a href="http://www.indokreatif.net" target="_blank">Indokreatif Teknologi</a></li>
-		<li><a href="http://www.elsyifa.com" target="_blank">Cloud Solution</a></li>
-	</ul>
-</li>
-
-
-</ul>
-<!-- end of menu -->
-
-</th>
-<th id="contentwrapper">
-<div id="content">
-<!-- content -->
-<h2>ZakatCalc</h2>
-As-salamu 'alaikum wa rahmatuLlahi wa barakatuh
-<br /><br />
-Keterangan dan panduan singkat tentang ZakatCalc.
-<ol>
-<li>ZakatCalc merupakan aplikasi penghitung zakat mal (harta) berbasis web. Sepenuhnya hanya menggunakan HTML, CSS dan JavaScript/AJAX. Sehingga, tidak ada dependensi khusus terhadap sistem operasi tertentu.</li>
-<li>ZakatCalc bersifat gratis dan opensource.</li>
-<li>Aplikasi ini sudah di-ujicoba dan berjalan baik pada browser seperti Firefox (v8.0).</li>
-<li>Semua penulisan angka menggunakan format Indonesia. Misalnya satu juta, boleh ditulis dengan 1.000.000 atau 1000000 atau 1.000.000,00 atau 1000000,00.</li>
-<li>Pada versi selanjutnya, insyaaLlah akan semakin disempurnakan, sehingga dapat mencakup semua jenis zakat mal (harta). Termasuk juga nantinya akan diberikan panduan yang lebih lengkap tentang zakat.</li>
-<li>Silahkan mengunjungi <a href="http://islam.indokreatif.net/zakatcalc/">http://islam.indokreatif.net/zakatcalc/</a> untuk men-download update atau rilis terbaru dari ZakatCalc.</li>
-</ol>
-Terima kasih,<br />
-Was-salamu 'alaikum wa rahmatuLlahi wa barakatuh<br />
-Indokreatif Teknologi
-<!-- end of content -->
-
-</div>
-</th>
-
-</tr></table> <!-- mainwrapper -->
-
-</div>
-<div id="footer">&copy; 2009-2013 by Al Farisi & Indokreatif Teknologi. All Rights Reserved.</div>
-</div>
-
-</body>
+            <div class="mdl-layout__drawer mdl-layout--small-screen-only">
+                <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
+                    <a class="mdl-navigation__link" href="index.html">Beranda</a>
+                    <a class="mdl-navigation__link" href="portfolio.html">Zakat Emas dan Perak</a>
+                    <a class="mdl-navigation__link" href="about.html">Zakat Uang</a>
+                    <a class="mdl-navigation__link" href="about.html">Zakat Perdagangan</a>
+                    <a class="mdl-navigation__link" href="about.html">Zakat Pertanian</a>
+                    <a class="mdl-navigation__link" href="about.html">Zakat Hewan Ternak</a>
+                    <a class="mdl-navigation__link" href="about.html">Zakat Harta Temuan</a>
+                    <a class="mdl-navigation__link" href="contact.html">Tentang</a>
+                </nav>
+            </div>
+        
+            <main class="mdl-layout__content">
+                <div class="site-content">
+                    <div class="mdl-grid site-max-width">
+                        <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp page-content">
+                        <div class="mdl-card__title">
+                            <h1 class="mdl-card__title-text">Kalkulator Zakat</h1>
+                        </div>
+                        <div class="mdl-card__media"><img class="article-image" src="materialize/img/about.jpg" border="0" alt="About"></div>
+                        
+                        <div class="mdl-grid">
+                            <div class="mdl-cell mdl-cell--12-col">
+                                <h3 class="mdl-cell mdl-cell--12-col mdl-typography--headline">As-salamu 'alaikum wa rahmatuLlahi wa barakatuh</h3>
+                                <div class="mdl-cell mdl-cell--12-col mdl-card__supporting-text no-padding ">
+                                    Keterangan dan panduan singkat tentang Kalkulator Zakat.
+                                    <ol>
+                                        <li>Kalkulator Zakat merupakan aplikasi penghitung zakat mal (harta) berbasis web yang dimodifikasi dari base project <a href="https://github.com/alfarisi/zakatcalc" target="_blank">ZakatCalc</a>. Sepenuhnya hanya menggunakan HTML, CSS dan JavaScript/AJAX. Sehingga, tidak ada dependensi khusus terhadap sistem operasi tertentu.</li>
+                                        <li>Kalkulator Zakat juga bersifat gratis dan opensource seperti ZakatCalc.</li>
+                                        <li>Semua penulisan angka menggunakan format Indonesia. Misalnya satu juta, boleh ditulis dengan 1.000.000 atau 1000000 atau 1.000.000,00 atau 1000000,00.</li>
+                                        <li>Pada versi selanjutnya, Insyallah akan semakin disempurnakan, sehingga dapat mencakup semua jenis zakat mal (harta). Termasuk juga nantinya akan diberikan panduan yang lebih lengkap tentang zakat.</li>
+                                        <li>Silahkan mengunjungi <a href="http://islam.indokreatif.net/zakatcalc/">http://islam.indokreatif.net/zakatcalc/</a> untuk men-download update atau rilis terbaru dari ZakatCalc.</li>
+                                        <li>Silahkan kunjungi <a href="https://github.com/irfanpule/zakatcalc">disini</a> untuk men-download versi modifikasi ZakatCalc yaitu Kalkulator Zakat.</li>
+                                    </ol>
+                                    Terima kasih,<br />
+                                    Was-salamu 'alaikum wa rahmatuLlahi wa barakatuh<br />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <footer class="mdl-mini-footer">
+                    <div class="footer-container">
+                        <div class="mdl-logo">&copy; Design by: <a href="https://templateflip.com/" target="_blank">TemplateFlip</a></div>
+                        <ul class="mdl-mini-footer__link-list">
+                        <li><a href="#">Modify by: <a href="https://github.com/irfanpule/zakatcalc">irfanpule</a></li>
+                        </ul>
+                    </div>
+                </footer>
+            </main>
+            <script src="https://code.getmdl.io/1.3.0/material.min.js" defer></script>
+        </div>
+    </body>
 </html>
