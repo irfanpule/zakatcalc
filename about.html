@@ -1,118 +1,104 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
-<head>
-<meta name="Description" content="ZakatCalc - Kalkulator Zakat" />
-<meta name="Keywords" content="ZakatCalc, zakat, mal, harta, penghasilan, profesi, kalkulator" />
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<meta name="Distribution" content="Global" />
-<meta name="Robots" content="index,follow" />
-<title>ZakatCalc - Kalkulator Zakat</title>
-<link rel="stylesheet" href="css/style.css" type="text/css" />
-<script language="javascript" type="text/javascript" src="js/jquery.min.js"></script>
-<script language="javascript" type="text/javascript" src="js/elsyifa.js"></script>
-<script language="javascript" type="text/javascript" src="js/main.js"></script>
-</head>
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Kalkulator Zakat</title>
+        <meta name="description" content="Demo of Material design portfolio template by TemplateFlip.com."/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;amp;lang=en" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css" rel="stylesheet">
+        <link href="materialize/styles/main.css" rel="stylesheet">
+    </head>
+    <body id="top">
+        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+            
+            <header class="mdl-layout__header mdl-layout__header--waterfall site-header">
+                <div class="mdl-layout__header-row site-logo-row"><span class="mdl-layout__title">
+                    <div class="site-logo"></div><span class="site-description">Kalkulator Zakat</span></span></div>
+                <div class="mdl-layout__header-row site-navigation-row mdl-layout--large-screen-only">
+                <nav class="mdl-navigation indigo mdl-typography--body-1-force-preferred-font">
+                    <a class="mdl-navigation__link" href="index.html">Beranda</a>
+                    <a class="dropdown-trigger mdl-navigation__link" href="#!" data-target="dropdown1">Macam-macam Zakat</a>
+                    <!-- Dropdown Structure -->
+                    <ul id="dropdown1" class="dropdown-content">
+                        <li><a class="" href="zc_emas_perak.html">Zakat Emas dan Perak</a></li>
+                        <li><a class="" href="about.html">Zakat Uang</a></li>
+                        <li><a class="" href="about.html">Zakat Perdagangan</a></li>
+                        <li><a class="" href="about.html">Zakat Pertanian</a></li>
+                        <li><a class="" href="about.html">Zakat Hewan Ternak</a></li>
+                        <li><a class="" href="about.html">Zakat Harta Temuan</a></li>
+                        <li><a class="" href="contact.html">Tentang</a></li>
+                    </ul>
+                    <a class="mdl-navigation__link" href="about.html">Tentang</a>
+                </nav>
+                </div>
+            </header>
 
-<body>
+            <div class="mdl-layout__drawer mdl-layout--small-screen-only">
+                <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
+                    <a class="mdl-navigation__link" href="index.html">Beranda</a>
+                    <a class="mdl-navigation__link" href="zc_emas_perak.html">Zakat Emas dan Perak</a>
+                    <a class="mdl-navigation__link" href="about.html">Zakat Uang</a>
+                    <a class="mdl-navigation__link" href="about.html">Zakat Perdagangan</a>
+                    <a class="mdl-navigation__link" href="about.html">Zakat Pertanian</a>
+                    <a class="mdl-navigation__link" href="about.html">Zakat Hewan Ternak</a>
+                    <a class="mdl-navigation__link" href="about.html">Zakat Harta Temuan</a>
+                    <a class="mdl-navigation__link" href="contact.html">Tentang</a>
+                </nav>
+            </div>
+        
+            <main class="mdl-layout__content">
+                <div class="site-content">
+                    <div class="mdl-grid site-max-width">
+                        <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp page-content">
+                        <div class="mdl-card__title">
+                        </div>
+                        <div class="mdl-card__media"><img class="article-image" src="materialize/img/about.jpg" border="0" alt="About"></div>
+                        
+                        <div class="mdl-grid">
+                            <div class="mdl-cell mdl-cell--12-col">
+                                <h3 class="mdl-cell mdl-cell--12-col mdl-typography--headline">Tentang</h3>
+                                <div class="mdl-cell mdl-cell--12-col mdl-card__supporting-text no-padding ">
+									Kalkulator Zakat v3.0<br />
+									Hasil modifikasi dari proyek sebelumnya yaitu <a href="https://github.com/alfarisi/zakatcalc/releases/tag/v2.3.3">ZakatCalc Version 2.3.3</a> milik <a href="https://github.com/alfarisi">Alfarisi</a>. <br>
+									Saya modifikasi dengan adanya perubahan style menggunakan pustaka materialize dan tema milik <a href="https://templateflip.com/"> TemplateFlip </a>, agar tampilan lebih modern dan responsive.<br>
+									Adapun kedepannya penambahan fitur-fitur dan lainnya akan diperbarui melalui Kalkulator Zakat.
+									<br /><br />
+									Unduh: <a href="https://github.com/irfanpule/zakatcalc/" target="_blank">github</a>
 
-<div id='container'>
-<div id='containerbox'>
-<div id='header'>
-<div id='mainheader'></div>
-<div id='searchbar'></div>
-<div class='cleared'></div>
-</div>
-<div id='topnav'>
-	<a href='./index.html'>Home</a> |
-	<a href='https://github.com/alfarisi/zakatcalc/releases'>Download</a>
-</div>
-<table id="mainwrapper"><tr>
-<th id="sidebar">
+									<br /><br />
+									<p>Reference :<br />
+									1. https://templateflip.com/<br />
+									2. https://materializecss.com/<br />
+									3. https://github.com/alfarisi/zakatcalc<br />
+									</p>
 
-<!-- menu -->
-<ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <footer class="mdl-mini-footer">
+                    <div class="footer-container">
+                        <div class="mdl-logo">&copy; Design by: <a href="https://templateflip.com/" target="_blank">TemplateFlip</a></div>
+                        <ul class="mdl-mini-footer__link-list">
+                        <li><a href="#">Modify by: <a href="https://github.com/irfanpule/zakatcalc">irfanpule</a></li>
+                        </ul>
+                    </div>
+                </footer>
+            </main>
+            <script language="javascript" type="text/javascript" src="js/jquery.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+            <script src="https://code.getmdl.io/1.3.0/material.min.js" defer></script>
 
-<li>
-	<h3>Kalkulator Zakat</h3>
-	<ul class="sidenav">
-		<li><a href="zc_emas_perak.html">Zakat Emas & Perak</a></li>
-		<li><a href="zc_uang.html">Zakat Uang</a></li>
-		<li><a href="zc_perdagangan.html">Zakat Perdagangan</a></li>
-		<li><a href="zc_pertanian.html">Zakat Pertanian</a></li>
-		<li><a href="zc_ternak.html">Zakat Hewan Ternak</a></li>
-		<li><a href="zc_temuan.html">Zakat Harta Temuan</a></li>
-	</ul>
-</li>
-
-<li>
-	<h3>Help</h3>
-	<ul class="sidenav">
-		<li><a href="about.html">About</a></li>
-		<li><a href="license.html">License</a></li>
-	</ul>
-</li>
-
-<li>
-	<h3>Link</h3>
-	<ul class="sidenav">
-		<li><a href="http://www.indokreatif.net" target="_blank">Indokreatif Teknologi</a></li>
-		<li><a href="http://www.elsyifa.com" target="_blank">Cloud Solution</a></li>
-	</ul>
-</li>
-
-
-</ul>
-<!-- end of menu -->
-
-</th>
-<th id="contentwrapper">
-<div id="content">
-<!-- content -->
-
-<h2>About</h2>
-
-ZakatCalc v2.3.3<br />
-Copyright &copy; 2009-2015, Al Farisi & Indokreatif Teknologi<br />
-All rights reserved
-<br /><br />
-Download : <br />
-<a href="https://github.com/alfarisi/zakatcalc/releases" target="_blank">https://github.com/alfarisi/zakatcalc/releases</a>
-<br /><br />
-Contributor :<br />
-- Al Farisi [<a href="http://alfarisi.web.id" target="_blank">http://alfarisi.web.id</a>]
-
-<br /><br />
-Reference :<br />
-1. http://ekonomisyariat.com<br />
-2. http://muslim.or.id<br />
-3. http://pengusahamuslim.com<br />
-4. http://ustadzkholid.com<br />
-5. http://www.konsultasisyariah.com<br />
-6. http://www.rumaysho.com<br /><br /><br />
-
-<!--
-Muhammad Abduh Tuasikal. Syarat-Syarat Zakat. http://muslim.or.id/fiqh-dan-muamalah/syarat-syarat-zakat.html
-
-Muhammad Abduh Tuasikal. Perhitungan Zakat Penghasilan. http://www.rumaysho.com/hukum-islam/zakat/3412-perhitungan-zakat-penghasilan.html
-
-Muhammad Abduh Tuasikal. Panduan Zakat Emas, Perak dan Mata Uang. http://muslim.or.id/fiqh-dan-muamalah/panduan-zakat-emas-perak-dan-mata-uang.html
-
-http://ustadzkholid.com/tanya-ustadz/fiqih-tanya-ustadz/kapan-zakat-pertanian-dibayarkan/
-
-http://kaahil.wordpress.com/2010/09/01/kupas-tuntas-zakat-nishab-zakat-harta-yang-wajib-dizakati-zakat-pertanian-hewan-ternak-emas-dan-perak-uang-barang-dagangan-dll-disertai-tabel-perhitungan-zakat-hartamaal/
-
-http://ekonomisyariat.com/zakat/serba-serbi-zakat-mal.html -->
-
-<!-- end of content -->
-
-</div>
-</th>
-
-</tr></table> <!-- mainwrapper -->
-
-</div>
-<div id="footer">&copy; 2009-2015 by Al Farisi & Indokreatif Teknologi. All Rights Reserved.</div>
-</div>
-
-</body>
+            <script>
+                $(document).ready(function() {
+                    $(".dropdown-trigger").dropdown();
+                });
+            </script>
+        </div>
+    </body>
 </html>
