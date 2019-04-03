@@ -1,4 +1,5 @@
-ZakatCalc
+Kalkulator Zakat
 =========
-(c) 2009-2015 Al Farisi & Indokreatif Teknologi. 
-All rights reserved.
+
+Semoga bermanfaat dan bisa dipergunakan sebagaimana mertinya.
+IT Media LAZ ABA
