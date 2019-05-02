@@ -319,7 +319,7 @@ zc_pertanian = function () {
 	panen = $('#panen').val();
 	panen = $.elsyifaJS.indonesianNumberToFloat(panen);
 
-	if (panen < 750) {
+	if (panen < 612) {
 		$('#zakat').val('0');
 		$('#keterangan').html('Hasil panen BELUM mencapai nishab. Tidak dikenakan kewajiban zakat.');
 	} else {
