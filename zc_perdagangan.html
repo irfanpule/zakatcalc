@@ -13,8 +13,8 @@
         <link href="materialize/styles/main.css" rel="stylesheet">
     </head>
     <body id="top">
-        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header"> 
-            
+        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+
             <header class="mdl-layout__header mdl-layout__header--waterfall site-header">
                 <div class="mdl-layout__header-row site-logo-row"><span class="mdl-layout__title">
                     <div class="site-logo"></div><span class="site-description">Kalkulator Zakat</span></span></div>
@@ -51,15 +51,15 @@
             </div>
 
             <main class="mdl-layout__content">
-                <div class="site-content">            
+                <div class="site-content">
                     <div class="mdl-grid site-max-width">
-                        <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp page-content">    
+                        <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp page-content">
                         <div class="mdl-grid site-copy">
                             <div class="mdl-cell mdl-cell--12-col">
                                 <h3 class="header">Zakat Perdagangan</h3>
                                 <p>
                                     Barang dagangan di sini termasuk tanah, rumah, kendaraan, ternak (selain kambing, sapi/kerbau dan unta), perhiasan dll yang diniatkan untuk dijual.<br /><br />
-                                    - Nishabnya senilai <b>85 gram emas</b>.<br />
+                                    - Nishabnya senilai <b>85 gram emas atau 595 gram perak</b>.<br />
                                     - Ukuran zakatnya adalah sebesar <b>2,5% atau 1/40</b>.<br />
                                     - Telah mencapai haul <b>1 tahun hijriyah</b>.
                                 </p>
@@ -70,15 +70,28 @@
                                     <div class="col s12">
                                         <table class="form_perhitungan table">
                                             <tr class="grey">
-                                                <th colspan="2" class="tableheader"><b>Nishab</b></th>
+                                                <th colspan="2" class="tableheader"><strong>Nishab</strong></th>
                                             </tr>
                                             <tr>
-                                                <th class="label_cols">Harga 1 gram emas murni</th>
-                                                <th class="value_cols">Rp <input type="text" id="harga_emas" class="input_angka" onkeyup="validasiAngka(this); nisab_emas(); zc_mal_hitung();" value="511.000,00" /></th>
+                                                <th class="label_cols">Nishab yang digunakan</th>
+                                                <th class="value_cols">
+                                                    <select class="browser-default" name="opsi_nisab" id="opsi_nisab" onchange="zc_nisab_mas_perak(); zc_mal_hitung();">
+                                                        <option value="emas" selected="selected">Emas</option>
+                                                        <option value="perak">Perak</option>
+                                                    </select>
+                                                </th>
                                             </tr>
                                             <tr>
-                                                <th class="label_cols"><b>.:. Nishab</b></th>
-                                                <th class="value_cols">Rp <input type="text" id="nisab_emas" class="input_angka" disabled="disabled" value="43.435.000,00" /> <input type="hidden" id="nisab_emas_float" value="43435000.00" /></th>
+                                                <th class="label_cols">Harga 1 gram emas</th>
+                                                <th class="value_cols">Rp <input type="text" id="harga_emas" class="input_angka" onkeyup="validasiAngka(this); zc_nisab_mas_perak(); zc_mal_hitung();" onblur="validasi_numstring(this);" value="511.000,00" /></th>
+                                            </tr>
+                                            <tr>
+                                                <th class="label_cols">Harga 1 gram perak</th>
+                                                <th class="value_cols">Rp <input type="text" id="harga_perak" class="input_angka" onkeyup="validasiAngka(this); zc_nisab_mas_perak(); zc_mal_hitung();" onblur="validasi_numstring(this);" value="11.000,00" disabled="disabled" /></th>
+                                            </tr>
+                                            <tr>
+                                                <th class="label_cols"><strong>.:. Nishab</strong></th>
+                                                <th class="value_cols">Rp <input type="text" id="nisab" class="input_angka" disabled="disabled" value="43.435.000,00" /> <input type="hidden" id="nisab_float" value="43435000.00" /></th>
                                             </tr>
 
                                             <tr class="grey">
@@ -145,7 +158,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                
+
                             </div>
                         </div>
                     </div>

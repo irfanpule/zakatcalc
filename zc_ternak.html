@@ -13,8 +13,8 @@
         <link href="materialize/styles/main.css" rel="stylesheet">
     </head>
     <body id="top">
-        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header"> 
-            
+        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+
             <header class="mdl-layout__header mdl-layout__header--waterfall site-header">
                 <div class="mdl-layout__header-row site-logo-row"><span class="mdl-layout__title">
                     <div class="site-logo"></div><span class="site-description">Kalkulator Zakat</span></span></div>
@@ -51,16 +51,38 @@
             </div>
 
             <main class="mdl-layout__content">
-                <div class="site-content">            
+                <div class="site-content">
                     <div class="mdl-grid site-max-width">
-                        <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp page-content">    
+                        <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp page-content">
                         <div class="mdl-grid site-copy">
                             <div class="mdl-cell mdl-cell--12-col">
                                 <h3 class="header">Zakat Ternak</h3>
+                                <p>Untuk zakat kambing</p>
                                 <p>
-                                    Untuk zakat kambing :<br />
-                                    - Nishab-nya adalah <b>40 ekor</b>.<br />
-                                    - Telah mencapai <b>haul 1 tahun hijriyah</b>.
+                                    <b>40 - 120 ekor</b> = 1 kambing <br>
+                                    <b>121 - 200 ekor</b> = 2 kambing <br>
+                                    <b>201 - 399 ekor</b> = 3 kambing <br>
+                                    <b>400 - 499 ekor</b> = 4 kambing <br>
+                                    <b>500 - 599 ekor</b> = 4 kambing <br>
+                                </p>
+
+                                <p>Untuk zakat sapi</p>
+                                <p>
+                                    <b>30 - 39 ekor</b> = 1 tabi'/tabi'ah <br>
+                                    <b>40 - 59 ekor</b> = 1 musinnah <br>
+                                    <b>60 - 69 ekor</b> = 2 tabi'/tabi'ah <br>
+                                    <b>70 - 79 ekor</b> = 1 tabi' + 1 musinnah <br>
+                                    <b>80 - 89 ekor</b> = 2 musinnah <br>
+                                    <b>90 - 99 ekor</b> = 3 tabi' <br>
+                                    <b>100 ekor</b> = 2 tabi' + 1 musinnah <br>
+                                </p>
+                                <p>
+                                    Ket: </br>
+                                    <ul>
+                                        <li style="font-style: italic;">*tabi’ sapi jantan telah genap usia1 tahun &amp; sudah masuk tahun ke 2</li>
+                                        <li style="font-style: italic;">*tabi’ah sapi betina telah genap usia1 tahun &amp; sudah masuk tahun ke 2</li>
+                                        <li style="font-style: italic;">*musinnah sapi betina telah genap usia 2 tahun &amp; sudah masuk tahun ke 3 </li>
+                                    </ul>
                                 </p>
                                 <div class="divider"></div>
                                 <br></br>
@@ -68,19 +90,33 @@
                                     <div class="col s12">
                                         <table class="form_perhitungan table">
                                             <tr class="grey">
-                                                <th colspan="2" class="tableheader"><b>Kambing</b></th>
+                                                <th colspan="2" class="tableheader"><b>Yang dimiliki</b></th>
                                             </tr>
                                             <tr>
                                                 <th class="label_cols">Jumlah Kambing</th>
                                                 <th class="value_cols"><input type="text" id="kambing" class="input_angka" onkeyup="validasiAngka(this); zc_ternak_kambing();" style="width:40px;" onblur="validasi_numstring(this);" /> ekor</th>
                                             </tr>
                                             <tr>
-                                                <th class="label_cols"><b>.:. Zakat</b></th>
+                                                <th class="label_cols">Jumlah Sapi</th>
+                                                <th class="value_cols"><input type="text" id="sapi" class="input_angka" onkeyup="validasiAngka(this); zc_ternak_sapi();" style="width:40px;" onblur="validasi_numstring(this);" /> ekor</th>
+                                            </tr>
+                                            <tr class="grey">
+                                                <th colspan="2" class="tableheader"><b>Zakat</b></th>
+                                            </tr>
+                                            <tr>
+                                                <th class="label_cols"><b>.:. Zakat Kambing</b></th>
                                                 <th class="value_cols"><input type="text" id="zakat_kambing" class="input_angka" style="width:40px;" disabled="disabled" /> ekor</th>
+                                            </tr>
+                                            <tr>
+                                                <th class="label_cols"><b>.:. Zakat Sapi</b></th>
+                                                <th class="value_cols"><input type="text" id="zakat_sapi" class="input_angka" style="width:40px;" disabled="disabled" /> <span id="satuan_sapi">ekor</span></th>
                                             </tr>
 
                                             <tr>
                                                 <th colspan="2" class="tableheader" id="keterangan_kambing">&nbsp;</th>
+                                            </tr>
+                                            <tr>
+                                                <th colspan="2" class="tableheader" id="keterangan_sapi">&nbsp;</th>
                                             </tr>
                                         </table>
                                         <br />
@@ -88,7 +124,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                
+
                             </div>
                         </div>
                     </div>
