@@ -265,7 +265,10 @@ zc_ternak_sapi = function () {
 	} else if (sapi >= 80 && sapi <= 89) {
 		$('#zakat_sapi').val('2');
 		$('#satuan_sapi').html('musinnah');
-	} else if (sapi >= 90 && sapi <= 100) {
+	} else if (sapi >= 90 && sapi <= 99) {
+		$('#zakat_sapi').val('2');
+		$('#satuan_sapi').html('musinnah');
+	} else if (sapi >= 100 && sapi <= 109) {
 		$('#zakat_sapi').val('2');
 		$('#satuan_sapi').html('tabi’ + 1 musinnah');
 	} else {
