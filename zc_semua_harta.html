@@ -24,6 +24,7 @@
                     <a class="dropdown-trigger mdl-navigation__link" href="#!" data-target="dropdown1">Macam-macam Zakat</a>
                     <!-- Dropdown Structure -->
                     <ul id="dropdown1" class="dropdown-content">
+                        <li><a class="" href="zc_semua_harta.html">Hitung Semua Harta</a></li>
                         <li><a class="" href="zc_emas_perak.html">Zakat Emas dan Perak</a></li>
                         <li><a class="" href="zc_uang.html">Zakat Uang</a></li>
                         <li><a class="" href="zc_perdagangan.html">Zakat Perdagangan</a></li>
@@ -40,6 +41,7 @@
                 <nav class="mdl-navigation white mdl-typography--body-1-force-preferred-font">
                     <a class="mdl-navigation__link green darken-3" href="#" style="color:#fff;"><b>Kalkulator Zakat</b></a>
                     <a class="mdl-navigation__link" href="index.html">Beranda</a>
+                    <a class="mdl-navigation__link" href="zc_semua_harta.html">Hitung Semua Harta</a>
                     <a class="mdl-navigation__link" href="zc_emas_perak.html">Zakat Emas dan Perak</a>
                     <a class="mdl-navigation__link" href="zc_uang.html">Zakat Uang</a>
                     <a class="mdl-navigation__link" href="zc_perdagangan.html">Zakat Perdagangan</a>
@@ -56,7 +58,7 @@
                         <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp page-content">
                         <div class="mdl-grid site-copy">
                             <div class="mdl-cell mdl-cell--12-col">
-                                <h3 class="header">Zakat Emas dan Perak</h3>
+                                <h3 class="header">Hitung Semua Harta</h3>
                                 <p>
                                     Untuk menghitung zakat emas dan perak yang telah tersimpan selama <b>1 tahun hijriyah</b>. Zakat yang dikeluarkan adalah sebesar <b>2,5%</b>.<br />
                                     - Nishab emas adalah <b>85 gram</b>.<br />
@@ -65,76 +67,61 @@
                                 <div class="divider"></div>
                                 <br></br>
                                 <div class="row">
-                                    <form class="col s12">
-                                        <div class="row card-panel lighten-5 z-depth-1">
-                                            <h5>Emas/Perak yang dimiliki</h5>
-                                            <div class="divider"></div>
-                                            <br></br>
-
-                                            <div class="input-field col s12 m6">
-                                                <input type="text" id="emas" onkeyup="validasiAngka(this); zc_emas_perak(); updateInputText()" onblur="validasi_numstring(this);" class="validate col s10 m10 input_angka"  > gram
-                                                <label for="emas">Jumlah Emas</label>
-                                            </div>
-
-                                            <div class="input-field col s12 m6">
-                                                <input type="text" id="perak" onkeyup="validasiAngka(this); zc_emas_perak(); updateInputText()" onblur="validasi_numstring(this);" class="validate col s10 m10 input_angka"  > gram
-                                                <label for="perak">Jumlah Perak</label>
-                                            </div>
+                                    <div class="col s12">
+                                        <table class="form_perhitungan">
+                                            <tr class="grey">
+                                                <th colspan="2" class="tableheader"><b>Yang dimiliki</b></th>
+                                            </tr>
+                                            <tr>
+                                                <th class="label_cols">Emas</th>
+                                                <th class="value_cols"><input type="text" id="emas" class="input_angka" style="width:60px" onkeyup="validasiAngka(this); zc_emas_perak();" onblur="validasi_numstring(this);" /> gram</th>
+                                            </tr>
+                                            <tr>
+                                                <th class="label_cols">Perak</th>
+                                                <th class="value_cols"><input type="text" id="perak" class="input_angka" style="width:60px" onkeyup="validasiAngka(this); zc_emas_perak();" onblur="validasi_numstring(this);" /> gram</th>
+                                            </tr>
+                                            <tr class="grey">
+                                                <th colspan="2" class="tableheader"><b>Zakat</b></th>
+                                            </tr>
+                                            <tr>
+                                                <th class="label_cols">.:. Zakat Emas</th>
+                                                <th class="value_cols"><input type="text" id="zakat_emas" class="input_angka" style="width:60px" disabled="disabled" /> gram</th>
+                                            </tr>
+                                            <tr>
+                                                <th class="label_cols">.:. Zakat Perak</th>
+                                                <th class="value_cols"><input type="text" id="zakat_perak" class="input_angka" style="width:60px" disabled="disabled" /> gram</th>
+                                            </tr>
+                                            <tr class="grey">
+                                                <th colspan="2" class="tableheader"><b>Zakat (jika dibayar dengan uang)</b></th>
+                                            </tr>
+                                            <tr>
+                                                <th class="label_cols">Harga 1 gram emas</th>
+                                                <th class="value_cols">Rp <input type="text" id="harga_emas" class="input_angka" onkeyup="validasiAngka(this); zc_emas_perak();" onblur="validasi_numstring(this);" value="511.000,00" /></th>
+                                            </tr>
+                                            <tr>
+                                                <th class="label_cols">Harga 1 gram perak</th>
+                                                <th class="value_cols">Rp <input type="text" id="harga_perak" class="input_angka" onkeyup="validasiAngka(this); zc_emas_perak();" onblur="validasi_numstring(this);" value="11.000,00" /></th>
+                                            </tr>
+                                            <tr>
+                                                <th class="label_cols">Zakat Emas</th>
+                                                <th class="value_cols">Rp <input type="text" id="zakat_emas_uang" class="input_angka" disabled="disabled" /></th>
+                                            </tr>
+                                            <tr>
+                                                <th class="label_cols">Zakat Perak</th>
+                                                <th class="value_cols">Rp <input type="text" id="zakat_perak_uang" class="input_angka" disabled="disabled" /></th>
+                                            </tr>
+                                            <tr>
+                                                <th class="label_cols">.:. Total</th>
+                                                <th class="value_cols">Rp <input type="text" id="zakat_total_uang" class="input_angka" disabled="disabled" /></th>
+                                            </tr>
+                                            <tr>
+                                                <th colspan="2" class="tableheader" id="keterangan">&nbsp;</th>
+                                            </tr>
+                                        </table>
+                                        <br />
+                                        <div id="footnote">
                                         </div>
-
-                                        <div class="row card-panel lighten-5 z-depth-1">
-                                            <h5>Zakat</h5>
-                                            <div class="divider"></div>
-                                            <br></br>
-
-                                            <div class="input-field col s12 m6">
-                                                <input disabled type="text" id="zakat_emas" class="validate col s10 m6 input_angka"> gram
-                                                <label class="active" for="zakat_emas">Zakat Emas</label>
-                                            </div>
-
-                                            <div class="input-field col s12 m6">
-                                                <input disabled type="text" id="zakat_perak" class="validate col s10 m6 input_angka"> gram
-                                                <label class="active" for="zakat_perak">Zakat Perak</label>
-                                            </div>
-                                        </div>
-
-                                        <div class="row row card-panel lighten-5 z-depth-1">
-                                            <h5>Zakat yang dibayar dengan uang</h5>
-                                            <div class="divider"></div>
-                                            <br></br>
-
-                                            <div class="col s12 m6">
-                                                Rp.
-                                                <div class="input-field inline">
-                                                    <input type="text" id="harga_emas" class="validate input_angka" onkeyup="validasiAngka(this); zc_emas_perak(); updateInputText();" onblur="validasi_numstring(this);" value="511.000,00">
-                                                    <label for="harga_emas">Harga 1 gram Emas</label>
-                                                </div>
-                                            </div>
-
-                                            <div class="col s12 m6">
-                                                Rp.
-                                                <div class="input-field inline">
-                                                    <input type="text" id="harga_perak" class="validate input_angka" onkeyup="validasiAngka(this); zc_emas_perak(); updateInputText();" onblur="validasi_numstring(this);" value="11.000,00">
-                                                    <label for="harga_perak">Harga 1 gram Perak</label>
-                                                </div>
-                                            </div>
-
-                                            <div class="col s12 m6">
-                                                Rp.
-                                                <div class="input-field inline">
-                                                    <input type="text" id="zakat_emas_uang" class="validate input_angka" disabled>
-                                                    <label for="zakat_emas_uang">Zakat Emas</label>
-                                                </div>
-                                            </div>
-                                            <div class="col s12 m6">
-                                                Rp.
-                                                <div class="input-field inline">
-                                                    <input type="text" id="zakat_perak_uang" class="validate input_angka" disabled>
-                                                    <label for="zakat_emas_uang">Zakat Perak</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </form>
+                                    </div>
                                 </div>
 
                             </div>
