@@ -69,59 +69,85 @@
                                     <div class="col s12">
                                         <table class="form_perhitungan">
                                             <tr class="grey">
+                                                <th colspan="2" class="tableheader"><strong>Nishab</strong></th>
+                                            </tr>
+                                            <tr>
+                                                <th class="label_cols">Nishab yang digunakan</th>
+                                                <th class="value_cols">
+                                                    <select class="browser-default" name="opsi_nisab" id="opsi_nisab" onchange="zc_nisab_mas_perak(opsi_nisab=false); zc_mal_hitung_harta_dan_perdagangan();">
+                                                        <option value="emas" selected="selected">Emas</option>
+                                                        <option value="perak">Perak</option>
+                                                    </select>
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <th class="label_cols">Harga 1 gram emas</th>
+                                                <th class="value_cols">Rp <input type="text" id="harga_emas" class="input_angka" onkeyup="validasiAngka(this); zc_nisab_mas_perak(opsi_nisab=false); zc_mal_hitung(); zc_emas_perak();" value="511.000,00" /></th>
+                                            </tr>
+                                            <tr>
+                                                <th class="label_cols">Harga 1 gram perak</th>
+                                                <th class="value_cols">Rp <input type="text" id="harga_perak" class="input_angka" onkeyup="validasiAngka(this); zc_nisab_mas_perak(opsi_nisab=false); zc_mal_hitung(); zc_emas_perak();" value="11.000,00" /></th>
+                                            </tr>
+                                            <tr>
+                                                <th class="label_cols"><strong>.:. Nishab</strong></th>
+                                                <th class="value_cols">Rp <input type="text" id="nisab" class="input_angka" disabled="disabled" value="43.435.000,00" /> <input type="hidden" id="nisab_float" value="43435000.00" /></th>
+                                            </tr>
+
+                                            <tr class="grey">
                                                 <th colspan="2" class="tableheader"><b>Emas dan Perak yang dimiliki</b></th>
                                             </tr>
                                             <tr>
                                                 <th class="label_cols">Emas</th>
-                                                <th class="value_cols"><input type="text" id="emas" class="input_angka" style="width:60px" onkeyup="validasiAngka(this); zc_emas_perak();" onblur="validasi_numstring(this);" /> gram</th>
+                                                <th class="value_cols"><input type="text" id="emas" class="input_angka" style="width:60px" onkeyup="validasiAngka(this); zc_emas_perak(); zc_mal_hitung_harta_dan_perdagangan();" /> gram</th>
                                             </tr>
                                             <tr>
                                                 <th class="label_cols">Perak</th>
-                                                <th class="value_cols"><input type="text" id="perak" class="input_angka" style="width:60px" onkeyup="validasiAngka(this); zc_emas_perak();" onblur="validasi_numstring(this);" /> gram</th>
+                                                <th class="value_cols"><input type="text" id="perak" class="input_angka" style="width:60px" onkeyup="validasiAngka(this); zc_emas_perak(); zc_mal_hitung_harta_dan_perdagangan();" /> gram</th>
                                             </tr>
                                             <tr>
-                                                <th class="label_cols">Harga 1 gram emas</th>
-                                                <th class="value_cols">Rp <input type="text" id="harga_emas" class="input_angka" onkeyup="validasiAngka(this); zc_emas_perak();" onblur="validasi_numstring(this);" value="511.000,00" /></th>
+                                                <th class="label_cols">Emas</th>
+                                                <th class="value_cols">Rp <input type="text" id="emas_uang" class="input_angka" disabled="disabled" /></th>
                                             </tr>
                                             <tr>
-                                                <th class="label_cols">Harga 1 gram perak</th>
-                                                <th class="value_cols">Rp <input type="text" id="harga_perak" class="input_angka" onkeyup="validasiAngka(this); zc_emas_perak();" onblur="validasi_numstring(this);" value="11.000,00" /></th>
-                                            </tr>
-                                            <tr>
-                                                <th class="label_cols">Zakat Emas</th>
-                                                <th class="value_cols">Rp <input type="text" id="zakat_emas_uang" class="input_angka" disabled="disabled" /></th>
-                                            </tr>
-                                            <tr>
-                                                <th class="label_cols">Zakat Perak</th>
-                                                <th class="value_cols">Rp <input type="text" id="zakat_perak_uang" class="input_angka" disabled="disabled" /></th>
+                                                <th class="label_cols">Perak</th>
+                                                <th class="value_cols">Rp <input type="text" id="perak_uang" class="input_angka" disabled="disabled" /></th>
                                             </tr>
                                             <tr>
                                                 <th class="label_cols">.:. Total</th>
-                                                <th class="value_cols">Rp <input type="text" id="zakat_total_uang" class="input_angka" disabled="disabled" /></th>
+                                                <th class="value_cols">Rp <input type="text" id="total_uang" class="input_angka" disabled="disabled" /></th>
+                                                <input type="hidden" id="total_uang_float" /></th>
                                             </tr>
 
                                             <tr class="grey">
-                                                <th colspan="2" class="tableheader"><strong>Harta Uang</strong></th>
+                                                <th colspan="2" class="tableheader"><strong>Harta Uang dan Perdagangan</strong></th>
                                             </tr>
                                             <tr>
                                                 <th class="label_cols">Uang tunai dan tabungan</th>
-                                                <th class="value_cols">Rp <input type="text" id="uang_tabungan" class="input_angka" onkeyup="validasiAngka(this); zc_mal_total_harta();" onblur="validasi_numstring(this);" /></th>
+                                                <th class="value_cols">Rp <input type="text" id="uang_tabungan" class="input_angka" onkeyup="validasiAngka(this); zc_mal_total_harta_dan_perdagangan();" /></th>
                                             </tr>
                                             <tr>
                                                 <th class="label_cols">Saham dan surat berharga lainnya <sup>[1]</sup></th>
-                                                <th class="value_cols">Rp <input type="text" id="saham" class="input_angka" onkeyup="validasiAngka(this); zc_mal_total_harta();" onblur="validasi_numstring(this);" /></th>
+                                                <th class="value_cols">Rp <input type="text" id="saham" class="input_angka" onkeyup="validasiAngka(this); zc_mal_total_harta_dan_perdagangan();" /></th>
+                                            </tr>
+                                            <tr>
+                                                <th class="label_cols">Stok Barang Dagangan</th>
+                                                <th class="value_cols">Rp <input type="text" id="stok" class="input_angka" onkeyup="validasiAngka(this); zc_mal_total_harta_dan_perdagangan();" /></th>
                                             </tr>
                                             <tr>
                                                 <th class="label_cols">Piutang <sup>[2]</sup></th>
-                                                <th class="value_cols">Rp <input type="text" id="piutang" class="input_angka" onkeyup="validasiAngka(this); zc_mal_total_harta();" onblur="validasi_numstring(this);" /></th>
+                                                <th class="value_cols">Rp <input type="text" id="piutang" class="input_angka" onkeyup="validasiAngka(this); zc_mal_total_harta_dan_perdagangan();" /></th>
                                             </tr>
                                             <tr>
                                                 <th class="label_cols"><strong>.:. Total Harta</strong></th>
                                                 <th class="value_cols">Rp <input type="text" id="total_harta" class="input_angka" disabled="disabled" /> <input type="hidden" id="total_harta_float" /></th>
                                             </tr>
                                             <tr>
-                                                <th class="label_cols">Hutang <sup>[3]</sup></th>
-                                                <th class="value_cols">Rp <input type="text" id="hutang" class="input_angka" onkeyup="validasiAngka(this); zc_mal_total_kewajiban();" onblur="validasi_numstring(this);" /></th>
+                                                <th class="label_cols">Hutang <sup>[2]</sup></th>
+                                                <th class="value_cols">Rp <input type="text" id="hutang" class="input_angka" onkeyup="validasiAngka(this); zc_mal_harta_dan_perdagangan_total_kewajiban();" /></th>
+                                            </tr>
+                                            <tr>
+                                                <th class="label_cols">Biaya Lain <sup>[3]</sup></th>
+                                                <th class="value_cols">Rp <input type="text" id="biaya" class="input_angka" onkeyup="validasiAngka(this); zc_mal_harta_dan_perdagangan_total_kewajiban();" /></th>
                                             </tr>
                                             <tr>
                                                 <th class="label_cols"><strong>.:. Total Kewajiban</strong></th>
@@ -132,6 +158,14 @@
                                                 <th class="value_cols">Rp <input type="text" id="selisih_harta" class="input_angka" disabled="disabled" /></th>
                                             </tr>
 
+                                            <tr>
+                                                <th class="label_cols"><b>.:. Total harta (Emas, Perak, Uang, Perdagangan)</b></th>
+                                                <th class="value_cols">Rp <input type="text" id="semua_harta" class="input_angka" disabled="disabled" /></th>
+                                            </tr>
+                                            <tr>
+                                                <th class="label_cols"><b>.:. Zakat</b></th>
+                                                <th class="value_cols">Rp <input type="text" id="zakat_semua_harta" class="input_angka" disabled="disabled" /></th>
+                                            </tr>
                                             <tr>
                                                 <th colspan="2" class="tableheader" id="keterangan">&nbsp;</th>
                                             </tr>

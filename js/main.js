@@ -88,19 +88,28 @@ zc_mal_nisab = function () {
 	$('#nisab').val(nisab);
 }
 
-zc_nisab_mas_perak = function () {
+zc_nisab_mas_perak = function (opsi_disabled=true) {
 	opsi = $('#opsi_nisab').val();
-
 	if (opsi == 'emas') {
-		$("#harga_emas").prop('disabled', false);
-		$("#harga_perak").prop('disabled', true);
+		if (opsi_disabled == true) {
+			$("#harga_emas").prop('disabled', false);
+			$("#harga_perak").prop('disabled', true);
+		} else {
+			$("#harga_emas").prop('disabled', false);
+			$("#harga_perak").prop('disabled', false);
+		}
 
 		harga = $('#harga_emas').val();
 		harga = $.elsyifaJS.indonesianNumberToFloat(harga);
 		nisab = 85 * harga;
 	} else {
-		$("#harga_emas").prop('disabled', true);
-		$("#harga_perak").prop('disabled', false);
+		if (opsi_disabled == true) {
+			$("#harga_emas").prop('disabled', true);
+			$("#harga_perak").prop('disabled', false);
+		} else {
+			$("#harga_emas").prop('disabled', false);
+			$("#harga_perak").prop('disabled', false);
+		}
 
 		harga = $('#harga_perak').val();
 		harga = $.elsyifaJS.indonesianNumberToFloat(harga);
@@ -142,6 +151,70 @@ zc_mal_total_kewajiban = function () {
 	$('#total_kewajiban').val(total_kewajiban);
 
 	zc_mal_hitung();
+}
+
+zc_mal_total_harta_dan_perdagangan = function () {
+	uang_tabungan = $('#uang_tabungan').val();
+	saham = $('#saham').val();
+	piutang = $('#piutang').val();
+	stok = $('#stok').val();
+
+	uang_tabungan = $.elsyifaJS.indonesianNumberToFloat(uang_tabungan);
+	saham = $.elsyifaJS.indonesianNumberToFloat(saham);
+	piutang = $.elsyifaJS.indonesianNumberToFloat(piutang);
+	stok = $.elsyifaJS.indonesianNumberToFloat(stok);
+
+	total_harta = uang_tabungan + saham + piutang + stok;
+	$('#total_harta_float').val(total_harta);
+
+	total_harta = $.elsyifaJS.toIndonesianNumber(total_harta);
+	$('#total_harta').val(total_harta);
+
+	zc_mal_hitung_harta_dan_perdagangan();
+}
+
+zc_mal_harta_dan_perdagangan_total_kewajiban = function () {
+	hutang = $('#hutang').val();
+	biaya = $('#biaya').val();
+
+	hutang = $.elsyifaJS.indonesianNumberToFloat(hutang);
+	biaya = $.elsyifaJS.indonesianNumberToFloat(biaya);
+
+	total_kewajiban = hutang + biaya;
+	$('#total_kewajiban_float').val(total_kewajiban);
+
+	total_kewajiban = $.elsyifaJS.toIndonesianNumber(total_kewajiban);
+	$('#total_kewajiban').val(total_kewajiban);
+
+	zc_mal_hitung_harta_dan_perdagangan();
+}
+
+zc_mal_hitung_harta_dan_perdagangan = function () {
+	nisab = $('#nisab_float').val();
+	harta = $('#total_harta_float').val();
+	kewajiban = $('#total_kewajiban_float').val();
+	uang_emas_perak = $('#total_uang_float').val()
+
+	nisab = validasi_float(nisab);
+	harta = validasi_float(harta);
+	kewajiban = validasi_float(kewajiban);
+	uang_emas_perak = validasi_float(uang_emas_perak);
+
+	selisih_harta = harta - kewajiban;
+	$('#selisih_harta').val($.elsyifaJS.toIndonesianNumber(selisih_harta));
+
+	total_uang = selisih_harta + uang_emas_perak
+	$('#semua_harta').val($.elsyifaJS.toIndonesianNumber(total_uang));
+
+	if (total_uang >= nisab) {
+		zakat = 0.025 * total_uang;
+		$('#keterangan').html('Harta SUDAH mencapai nishab. Dikenakan KEWAJIBAN ZAKAT.');
+	} else {
+		zakat = 0.00;
+		$('#keterangan').html('Harta BELUM mencapai nishab. Tidak dikenai kewajiban zakat.');
+	}
+
+	$('#zakat_semua_harta').val($.elsyifaJS.toIndonesianNumber(zakat));
 }
 
 zc_mal_hitung = function () {
@@ -295,6 +368,14 @@ zc_emas_perak = function () {
 
 	perak = $('#perak').val();
 	perak = $.elsyifaJS.indonesianNumberToFloat(perak);
+
+	uang_emas = emas * harga_emas;
+	uang_perak = perak * harga_perak;
+	total_uang = uang_emas + uang_perak;
+	$('#emas_uang').val($.elsyifaJS.toIndonesianNumber(uang_emas));
+	$('#perak_uang').val($.elsyifaJS.toIndonesianNumber(uang_perak));
+	$('#total_uang').val($.elsyifaJS.toIndonesianNumber(total_uang));
+	$('#total_uang_float').val(total_uang);
 
 	if (perak < 595) {
 		zakat_perak = 0;
