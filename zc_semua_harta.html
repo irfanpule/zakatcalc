@@ -59,8 +59,7 @@
                         <div class="mdl-grid site-copy">
                             <div class="mdl-cell mdl-cell--12-col">
                                 <h3 class="header">Hitung Semua Harta</h3>
-                                <p>
-                                    Untuk menghitung zakat emas dan perak yang telah tersimpan selama <b>1 tahun hijriyah</b>. Zakat yang dikeluarkan adalah sebesar <b>2,5%</b>.<br />
+                                <p>Untuk menghitung semua harta yang dimiliki dari emas dan perak, uang dan perdagangan yang telah tersimpan selama <b>1 tahun hijriyah</b>. Zakat yang dikeluarkan adalah sebesar <b>2,5%</b>.<br />
                                     - Nishab emas adalah <b>85 gram</b>.<br />
                                     - Nishab perak adalah <b>595 gram</b>.
                                 </p>
@@ -70,7 +69,7 @@
                                     <div class="col s12">
                                         <table class="form_perhitungan">
                                             <tr class="grey">
-                                                <th colspan="2" class="tableheader"><b>Yang dimiliki</b></th>
+                                                <th colspan="2" class="tableheader"><b>Emas dan Perak yang dimiliki</b></th>
                                             </tr>
                                             <tr>
                                                 <th class="label_cols">Emas</th>
@@ -79,20 +78,6 @@
                                             <tr>
                                                 <th class="label_cols">Perak</th>
                                                 <th class="value_cols"><input type="text" id="perak" class="input_angka" style="width:60px" onkeyup="validasiAngka(this); zc_emas_perak();" onblur="validasi_numstring(this);" /> gram</th>
-                                            </tr>
-                                            <tr class="grey">
-                                                <th colspan="2" class="tableheader"><b>Zakat</b></th>
-                                            </tr>
-                                            <tr>
-                                                <th class="label_cols">.:. Zakat Emas</th>
-                                                <th class="value_cols"><input type="text" id="zakat_emas" class="input_angka" style="width:60px" disabled="disabled" /> gram</th>
-                                            </tr>
-                                            <tr>
-                                                <th class="label_cols">.:. Zakat Perak</th>
-                                                <th class="value_cols"><input type="text" id="zakat_perak" class="input_angka" style="width:60px" disabled="disabled" /> gram</th>
-                                            </tr>
-                                            <tr class="grey">
-                                                <th colspan="2" class="tableheader"><b>Zakat (jika dibayar dengan uang)</b></th>
                                             </tr>
                                             <tr>
                                                 <th class="label_cols">Harga 1 gram emas</th>
@@ -114,6 +99,39 @@
                                                 <th class="label_cols">.:. Total</th>
                                                 <th class="value_cols">Rp <input type="text" id="zakat_total_uang" class="input_angka" disabled="disabled" /></th>
                                             </tr>
+
+                                            <tr class="grey">
+                                                <th colspan="2" class="tableheader"><strong>Harta Uang</strong></th>
+                                            </tr>
+                                            <tr>
+                                                <th class="label_cols">Uang tunai dan tabungan</th>
+                                                <th class="value_cols">Rp <input type="text" id="uang_tabungan" class="input_angka" onkeyup="validasiAngka(this); zc_mal_total_harta();" onblur="validasi_numstring(this);" /></th>
+                                            </tr>
+                                            <tr>
+                                                <th class="label_cols">Saham dan surat berharga lainnya <sup>[1]</sup></th>
+                                                <th class="value_cols">Rp <input type="text" id="saham" class="input_angka" onkeyup="validasiAngka(this); zc_mal_total_harta();" onblur="validasi_numstring(this);" /></th>
+                                            </tr>
+                                            <tr>
+                                                <th class="label_cols">Piutang <sup>[2]</sup></th>
+                                                <th class="value_cols">Rp <input type="text" id="piutang" class="input_angka" onkeyup="validasiAngka(this); zc_mal_total_harta();" onblur="validasi_numstring(this);" /></th>
+                                            </tr>
+                                            <tr>
+                                                <th class="label_cols"><strong>.:. Total Harta</strong></th>
+                                                <th class="value_cols">Rp <input type="text" id="total_harta" class="input_angka" disabled="disabled" /> <input type="hidden" id="total_harta_float" /></th>
+                                            </tr>
+                                            <tr>
+                                                <th class="label_cols">Hutang <sup>[3]</sup></th>
+                                                <th class="value_cols">Rp <input type="text" id="hutang" class="input_angka" onkeyup="validasiAngka(this); zc_mal_total_kewajiban();" onblur="validasi_numstring(this);" /></th>
+                                            </tr>
+                                            <tr>
+                                                <th class="label_cols"><strong>.:. Total Kewajiban</strong></th>
+                                                <th class="value_cols">Rp <input type="text" id="total_kewajiban" class="input_angka" disabled="disabled" /> <input type="hidden" id="total_kewajiban_float" /></th>
+                                            </tr>
+                                            <tr>
+                                                <th class="label_cols">Selisih harta dan kewajiban</th>
+                                                <th class="value_cols">Rp <input type="text" id="selisih_harta" class="input_angka" disabled="disabled" /></th>
+                                            </tr>
+
                                             <tr>
                                                 <th colspan="2" class="tableheader" id="keterangan">&nbsp;</th>
                                             </tr>
@@ -130,7 +148,7 @@
                 </div>
                 <footer class="mdl-mini-footer">
                     <div class="footer-container">
-                        <div class="mdl-logo">&copy; Template by: <a href="https://templateflip.com/" target="_blank">TemplateFlip</a></div>
+                        <div class="mdl-logo">&copy; Kakulator Zakat: <a href="https://bmabalampung.com/" target="_blank">LAZ ABA</a></div>
                         <ul class="mdl-mini-footer__link-list">
                         <li><a href="#">Modify by: IT Media LAZ ABA</a></li>
                         </ul>
