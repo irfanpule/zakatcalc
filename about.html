@@ -5,8 +5,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Kalkulator Zakat</title>
-        <meta name="description" content="Demo of Material design portfolio template by TemplateFlip.com."/>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <meta name="description" content="Memudahkan anda untuk menghitung zakat harta."/>
+        <link  href="libs/materialize/css/materialize.min.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;amp;lang=en" rel="stylesheet">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css" rel="stylesheet">
@@ -14,16 +14,17 @@
     </head>
     <body id="top">
         <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-            
+
             <header class="mdl-layout__header mdl-layout__header--waterfall site-header">
                 <div class="mdl-layout__header-row site-logo-row"><span class="mdl-layout__title">
                     <div class="site-logo"></div><span class="site-description">Kalkulator Zakat</span></span></div>
                 <div class="mdl-layout__header-row site-navigation-row mdl-layout--large-screen-only">
-                <nav class="mdl-navigation indigo mdl-typography--body-1-force-preferred-font">
+                <nav class="mdl-navigation green darken-3 mdl-typography--body-1-force-preferred-font">
                     <a class="mdl-navigation__link" href="index.html">Beranda</a>
                     <a class="dropdown-trigger mdl-navigation__link" href="#!" data-target="dropdown1">Macam-macam Zakat</a>
                     <!-- Dropdown Structure -->
                     <ul id="dropdown1" class="dropdown-content">
+                        <li><a class="" href="zc_semua_harta.html">Hitung Semua Harta</a></li>
                         <li><a class="" href="zc_emas_perak.html">Zakat Emas dan Perak</a></li>
                         <li><a class="" href="zc_uang.html">Zakat Uang</a></li>
                         <li><a class="" href="zc_perdagangan.html">Zakat Perdagangan</a></li>
@@ -38,7 +39,9 @@
 
             <div class="mdl-layout__drawer mdl-layout--small-screen-only">
                 <nav class="mdl-navigation white mdl-typography--body-1-force-preferred-font">
+                    <a class="mdl-navigation__link green darken-3" href="#" style="color:#fff;"><b>Kalkulator Zakat</b></a>
                     <a class="mdl-navigation__link" href="index.html">Beranda</a>
+                    <a class="mdl-navigation__link" href="zc_semua_harta.html">Hitung Semua Harta</a>
                     <a class="mdl-navigation__link" href="zc_emas_perak.html">Zakat Emas dan Perak</a>
                     <a class="mdl-navigation__link" href="zc_uang.html">Zakat Uang</a>
                     <a class="mdl-navigation__link" href="zc_perdagangan.html">Zakat Perdagangan</a>
@@ -48,31 +51,36 @@
                     <a class="mdl-navigation__link" href="about.html">Tentang</a>
                 </nav>
             </div>
-        
+
             <main class="mdl-layout__content">
                 <div class="site-content">
                     <div class="mdl-grid site-max-width">
                         <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp page-content">
                         <div class="mdl-card__title">
                         </div>
-                        <div class="mdl-card__media"><img class="article-image" src="materialize/img/about.jpg" border="0" alt="About"></div>
-                        
+                        <div class="mdl-card__media"><img class="article-image" src="materialize/img/kalkulator.jpg" border="0" alt="About"></div>
+
                         <div class="mdl-grid">
                             <div class="mdl-cell mdl-cell--12-col">
                                 <h3 class="mdl-cell mdl-cell--12-col mdl-typography--headline">Tentang</h3>
                                 <div class="mdl-cell mdl-cell--12-col mdl-card__supporting-text no-padding ">
-									Kalkulator Zakat v3.0<br />
-									Hasil modifikasi dari proyek sebelumnya yaitu <a href="https://github.com/alfarisi/zakatcalc/releases/tag/v2.3.3">ZakatCalc Version 2.3.3</a> milik <a href="https://github.com/alfarisi">Alfarisi</a>. <br>
-									Saya modifikasi dengan adanya perubahan style menggunakan pustaka materialize dan tema milik <a href="https://templateflip.com/"> TemplateFlip </a>, agar tampilan lebih modern dan responsive.<br>
-									Adapun kedepannya penambahan fitur-fitur dan lainnya akan diperbarui melalui Kalkulator Zakat.
+									Profile singkat LAZ ABA<br />
+									Lembaga Amil Zakat Abdurrahman Bin Auf (LAZ ABA) adalah lembaga Amil zakat, infaq dan shodaqoh di bawah Yayasan Abdurrahman Bin Auf berakte No. 22 taggal 21 Oktober 2004 yang disahkan di hadapan Notaris H. Haryanto, SH, MBA.<br>
+									LAZ ABA mengemban misi kemaslahatan umat dengan menghimpun zakat, infaq dan shodaqoh dari para muzaki dan dermawan untuk disalurkan kepada umat Islam yang berhak menerima melalui pengelolaan yang amanah, profesional dan sesuai dengan syariat Islam.<br>
+									Lembaga Amil Zakat Abdurrahaman Bin Auf KPP Lampung yang berdiri 1 januari 2009 dan di launching pada tanggal 8 februari 2009 di masjid Nurul Ulum Islamic Center Rajabasa Bandar Lampung. Lembaga ini berfungsi sebagai lembaga penghimpun zakat, infak, dan shodaqoh umat yang akan kembali ke umat.<br>
+									<li>Salurkan donasi anda ke rekening : </li>
+                                        <li><b>BANK MUAMALAT  (3570001903) a.n. BM ABA LAMPUNG</b>.</li>
+										<li>Informasi pembayaran Telp : <b>(0721) 8013 447 / 0812 7347 7773</b>.</li>
+                                        <li>Alamat kantor: Jln/Gg Mahoni I No. 29 Way Halim Permai Bandar Lampung atau Google Map <a href="https://goo.gl/maps/jkfwzBF5RF82" target="_blank">klik di sini</a>.</li>
 									<br /><br />
-									Unduh: <a href="https://github.com/irfanpule/zakatcalc/" target="_blank">github</a>
+									IT Media LAZ ABA
 
 									<br /><br />
-									<p>Reference :<br />
-									1. https://templateflip.com/<br />
-									2. https://materializecss.com/<br />
-									3. https://github.com/alfarisi/zakatcalc<br />
+									<p>Our Team :<br />
+									1. Ali Nurdin<br />
+									2. Ariyanto<br />
+									3. IrfanPule<br />
+                                    4. Malik <br>
 									</p>
 
                                 </div>
@@ -82,15 +90,15 @@
                 </div>
                 <footer class="mdl-mini-footer">
                     <div class="footer-container">
-                        <div class="mdl-logo">&copy; Design by: <a href="https://templateflip.com/" target="_blank">TemplateFlip</a></div>
+                        <div class="mdl-logo">&copy; Kalkulator Zakat: <a href="https://bmabalampung.com/" target="_blank">LAZ ABA</a></div>
                         <ul class="mdl-mini-footer__link-list">
-                        <li><a href="#">Modify by: <a href="https://github.com/irfanpule/zakatcalc">irfanpule</a></li>
+                        <li><a href="#">Modify by: IT Media LAZ ABA</a></li>
                         </ul>
                     </div>
                 </footer>
             </main>
             <script language="javascript" type="text/javascript" src="js/jquery.min.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+            <script src="libs/materialize/js/materialize.min.js"></script>
             <script src="https://code.getmdl.io/1.3.0/material.min.js" defer></script>
 
             <script>
